@@ -79,6 +79,7 @@
             compact: true
         }));
 
+        /*
         // 3D地形コントロール表示
         map.addControl(
             new maplibregl.TerrainControl({
@@ -86,9 +87,11 @@
                 exaggeration: 1 // 標高を強調する倍率
             })
         );
+        */
 
         // マップをロード
         map.on("load", () => {
+            /*
             // 標高タイルソース
             map.addSource("gsidem-terrain-rgb", {
                 type: 'raster-dem',
@@ -98,6 +101,7 @@
                 attribution: '<a href="https://maps.gsi.go.jp/development/ichiran.html#dem" target="_blank">地理院タイル(標高タイル)</a>',
                 tileSize: 256
             });
+            */
 
             /*
             // 標高タイルセット
@@ -220,7 +224,8 @@
             console.log('表示されているレイヤー: ' + rasterLayerIds);
 
             // 現在表示されているラスターレイヤをもとにポップアップ表示
-            RasterTileUrl = 'https://shiworks.xsrv.jp/raster-tiles/mlit-ksj/L03-b-21_dissolved/{z}/{x}/{y}.png';
+            // RasterTileUrl = 'https://shiworks.xsrv.jp/raster-tiles/mlit-ksj/L03-b-21_dissolved/{z}/{x}/{y}.png';
+            RasterTileUrl = 'https://public-data.geolonia.com/mlit-ksj-vector-2024/L03-b-21_dissolved/{z}/{x}/{y}.png';
             legend = legend_tochi;
 
             // クリック地点の座標を取得
